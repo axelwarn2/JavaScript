@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>#error1,#error2,#error3{display: none} span{color:cyan};</style>
+    <title>Голосование на сайте</title>
+</head>
+<body>
+    <form name="mainForm" onchange="Form()">
+        <h1>Голосование на сайте</h1>
+        <p>Фамилия имя: <input type="text" name="fi" onchange="FI()"><span id="error1">Ошибка</span></p>
+        <p>Дата рождения: <input type="text" name="birthday" onchange="Birthday()"><span id="error2">Ошибка</span></p>
+        <p>Возрасная категория: <input type="text" name="vozrast" readonly></p>
+        <p>Образование: <input type="text" name="obrazovanie"></p>
+        <p>Используемые языки программирования: <select name="langProg[]" id="langProg">
+            <option value="JavaScript" selected>JavaScript</option>
+            <option value="PHP" selected>PHP</option>
+            <option value="C#">C#</option>
+        </select></p>
+        <p>Какой социальной сетью вы пользуетесь: <div id="social" name="social">
+            <input type="radio" id="social" name="social" value="Facebook" checked>Facebook <br>
+            <input type="radio" id="social" name="social" value="ВКонтакте">ВКонтакте<br>
+            <input type="radio" id="social" name="social" value="Одноклассники">Одноклассники<br>
+            <input type="radio" id="social" name="social" value="Google+">Google+<br>
+            <input type="radio" id="social" name="social" value="Twitter">Twitter<br>
+        </div></p>
+        <p>Адрес электронной почты: <input type="text" name="mail" onchange="Mail()"><span id="error3">Ошибка</span></p>
+        <button type="submit" name="button" disabled>Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

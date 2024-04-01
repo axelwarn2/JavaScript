@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>#error1,#error2,#error3{display: none} span{color: red};</style>
+    <title>Форма участника конференциим</title>
+</head>
+<body>
+    <form name="mainForm" onchange="Form()">
+        <h1>Форма участника конференции</h1>
+        Ф.И.О: <input type="text" name="fio" onchange="FIO()"><span id="error1">Ошибка</span><br><br>
+        Организация: <input type="text" name="organization" onchange="Organization()"><span id="error2">Ошибка</span><br><br>
+        Должность: <div id="job" name="job">
+            <input type="radio" name="job" id="job" value="Аспирант">Аспирант<br>
+            <input type="radio" name="job" id="job" value="Ассистент">Ассистент<br>
+            <input type="radio" name="job" id="job" value="Старший преподаватель">Старший преподаватель<br>
+            <input type="radio" name="job" id="job" value="Доцент">Доцент<br>
+            <input type="radio" name="job" id="job" value="Профессор">Профессор<br>
+        </div><br><br>
+        Формы участия: <div id="formPartner">
+            <input type="checkbox" name="formPartner" id="check1" value="Доклад-1500">Доклад<br>
+            <input type="checkbox" name="formPartner" id="check2" value="Выступление-3000">Выступление<br>
+            <input type="checkbox" name="formPartner" id="check3" value="Видео-2000">Демонстрация видео материалов<br>
+            <input type="checkbox" name="formPartner" id="check4" value="Тезисы-1000">Тезисы<br>
+        </div><br><br>
+        Стоимость публикации: <input type="text" name="price" readonly><br><br>
+        Адрес электронной почты: <input type="text" name="mail" onchange="Mail()"><span id="error3">Ошибка</span><br><br>
+        <button type="submit" name="button" disabled>Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

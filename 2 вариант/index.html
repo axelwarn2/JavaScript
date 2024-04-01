@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>#error1,#error2,#error3{display: none} span{color: green};</style>
+    <title>Оформление заказа</title>
+</head>
+<body>
+    <form name="mainForm" onchange="Form()">
+        <h1>Оформление заказа</h1>
+        <p>Товар: <input type="text" name="towar"></p>
+        <p><input type="button" name="proverka" value="Проверить"></p>
+        <p>Цена: <input type="text" name="price" readonly></p>
+        <p>Ф.И.О: <input type="text" name="fio" onchange="FIO()"><span id="error1">Ошибка</span></p>
+        <p>Телефон: <input type="text" name="tel" onchange="Tel()"><span id="error2">Ошибка</span></p>
+        <p>Адрес: <textarea name="adress" cols="30" rows="10" onchange="Adress()"></textarea><span id="error3">Ошибка</span></p>
+        <p>Способ доставки: <select name="dostavka" id="dostavka">
+            <option id="dostavka" name="dostavka" value="Самовывоз">Самовывоз</option>
+            <option id="dostavka" name="dostavka" value="Курьер">Курьер</option>
+            <option id="dostavka" name="dostavka" value="Почта">Почта</option>
+        </select></p>
+        <p>Количество: <input type="text" name="count"></p>
+        <p>Стоимость: <input type="text" name="fullPrice" readonly></p>
+        <button type="submit" name="button" disabled>Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>#error1,#error2{display: none} span{color: aqua};</style>
+    <title>Регистрация корреспонденции</title>
+</head>
+<body>
+    <form name="mainForm" onchange="Form()">
+        <h1>Регистрация корреспонденции</h1>
+        <p>Дата поступления документа: <input type="text" name="datePostup" onchange="DataPostup()"><span id="error1">Ошибка</span></p>
+        <p>Форма поступления документа: <select name="formPostup" id="formPostup">
+            <option value="Почта">Почта</option>
+            <option value="Факс">Факс</option>
+            <option value="Email">Email</option>
+        </select></p>
+        <p>Вид документа: <input type="text" name="vidDocumenta" pattern="^(приказ)$|^(акт)$|^(справка)$"></p>
+        <p>Срочность: <div id="srochnost" name="srochnost">
+            <input type="radio" name="srochnost" id="srochnost" value="Очень срочно">Очень срочно <br>
+            <input type="radio" name="srochnost" id="srochnost" value="Cрочно">Cрочно <br>
+            <input type="radio" name="srochnost" id="srochnost" value="Важно">Важно <br>
+            <input type="radio" name="srochnost" id="srochnost" value="Для служебного пользования">Для служебного пользования<br>
+        </div></p>
+        <p>Срок исполнения: <input type="text" name="srok" readonly></p>
+        <p>Адрес: <textarea name="adress" id="adress" cols="30" rows="10" onchange="Adress()"></textarea><span id="error2">Ошибка</span></p>
+        <button type="submit" name="button" disabled>Отправить</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
